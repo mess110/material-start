@@ -67,32 +67,16 @@ npm test
 ## Directory Layout
 
 ```
-app/                    --> all of the source files for the application
-  assets/app.css        --> default stylesheet
-  src/           --> all app specific modules
-     users/              --> package for user features
+build/                  --> "compiled" version of the project
+src/                    --> all of the source files for the application
+  assets/               --> default assets
+  directives/           --> directives
+  users/                --> package for user features
+    views/              --> user related views
+  app.sass              --> app sass file
   index.html            --> app layout file (the main html template file of the app)
-karma.conf.js         --> config file for running unit tests with Karma
-e2e-tests/            --> end-to-end tests
+e2e-tests/              --> end-to-end tests
   protractor-conf.js    --> Protractor config file
   scenarios.js          --> end-to-end scenarios to be run by Protractor
+karma.conf.js           --> config file for running unit tests with Karma
 ```
-
-### Running the App during Development
-
-The angular-seed project comes pre-configured with a local development web server.  It is a node.js
-tool called [http-server][http-server].  You can install http-server globally:
-
-```
-npm install -g live-server
-```
-
-Then you can start your own development web server to serve static files from a folder by running:
-
-```
-cd app
-live-server
-```
-
-Alternatively, you can choose to configure your own webserver, such as apache or nginx. Just
-configure your server to serve the files under the `app/` directory.
