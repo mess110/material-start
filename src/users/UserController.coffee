@@ -80,7 +80,7 @@ do ->
 
       $mdBottomSheet.show(
         parent: angular.element(document.getElementById('content'))
-        templateUrl: './src/users/view/contactSheet.html'
+        templateUrl: './users/views/contactSheet.html'
         controller: [
           '$mdBottomSheet'
           ContactPanelController
