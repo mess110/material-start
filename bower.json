@@ -1,17 +1,17 @@
 {
   "name": "angular-material-starter",
-  "description": "A starter project for AngularJS Material",
-  "version": "0.0.2",
-  "homepage": "https://github.com/angular/material-start",
+  "description": "A starter project for AngularJS Material with coffee-script",
+  "version": "0.0.3",
+  "homepage": "https://github.com/mess110/material-start",
   "license": "MIT",
   "private": true,
   "dependencies": {
     "angular": "^1.4.x",
     "angular-animate": "^1.4.x",
     "angular-aria": "^1.4.x",
-    "angular-material": "^0.9.0"
+    "angular-material": "^0.11.0"
   },
   "devDependencies": {
-    "angular-material": "~0.9.4"
+    "angular-material": "~0.11.0"
   }
 }
