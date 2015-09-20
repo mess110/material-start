@@ -1,4 +1,4 @@
-app = angular.module('app', ['ngRoute', 'ngMaterial', 'users'])
+app = angular.module('app', ['ngRoute', 'LocalStorageModule', 'ngMaterial', 'users'])
 
 app.config ['$mdThemingProvider', '$mdIconProvider', ($mdThemingProvider, $mdIconProvider) ->
   $mdIconProvider
@@ -12,8 +12,11 @@ app.config ['$mdThemingProvider', '$mdIconProvider', ($mdThemingProvider, $mdIco
 
   $mdThemingProvider
     .theme('default')
-    .primaryPalette('brown')
-    .accentPalette('red')
+    .primaryPalette('deep-orange')
+    .accentPalette('pink')
+    .warnPalette('red')
+    .backgroundPalette('grey')
+    # .dark()
 
   return
 ]
@@ -24,3 +27,7 @@ app.config ['$routeProvider', ($routeProvider) ->
     .otherwise(redirectTo: '/users')
   return
 ]
+
+app.config (localStorageServiceProvider) ->
+  localStorageServiceProvider.setPrefix 'app'
+  return

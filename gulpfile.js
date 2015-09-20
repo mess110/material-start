@@ -22,6 +22,7 @@ var paths = {
       './bower_components/angular-route/angular-route.js',
       './bower_components/angular-animate/angular-animate.js',
       './bower_components/angular-aria/angular-aria.js',
+      './bower_components/angular-local-storage/dist/angular-local-storage.min.js',
       './bower_components/angular-material/angular-material.js'
     ],
     css: [
