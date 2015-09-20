@@ -15,7 +15,12 @@ var paths = {
   vendor: {
     icons: [
       './bower_components/material-design-icons/communication/svg/production/contact_mail_48px.svg',
-      { group: 'notification', icon: 'ic_adb_48px.svg' }
+      { group: 'social', icon: 'ic_person_add_48px.svg' },
+      { group: 'notification', icon: 'ic_adb_48px.svg' },
+      { group: 'content', icon: 'ic_clear_48px.svg' },
+      { group: 'content', icon: 'ic_add_48px.svg' },
+      { group: 'action', icon: 'ic_settings_48px.svg' },
+      { group: 'action', icon: 'ic_delete_48px.svg' }
     ],
     js: [
       './bower_components/angular/angular.js',

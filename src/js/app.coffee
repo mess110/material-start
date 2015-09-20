@@ -9,11 +9,16 @@ app.config ['$mdThemingProvider', '$mdIconProvider', ($mdThemingProvider, $mdIco
     .icon('hangouts', './assets/svg/hangouts.svg', 512)
     .icon('twitter', './assets/svg/twitter.svg', 512)
     .icon('phone', './assets/svg/phone.svg', 512)
+    .icon('person_add', './assets/svg/ic_person_add_48px.svg', 48)
+    .icon('clear', './assets/svg/ic_clear_48px.svg', 48)
+    .icon('plus', './assets/svg/ic_add_48px.svg', 48)
+    .icon('cog', './assets/svg/ic_settings_48px.svg', 48)
+    .icon('delete', './assets/svg/ic_delete_48px.svg', 48)
 
   $mdThemingProvider
     .theme('default')
     .primaryPalette('deep-orange')
-    .accentPalette('pink')
+    .accentPalette('blue')
     .warnPalette('red')
     .backgroundPalette('grey')
     # .dark()
@@ -23,8 +28,9 @@ app.config ['$mdThemingProvider', '$mdIconProvider', ($mdThemingProvider, $mdIco
 
 app.config ['$routeProvider', ($routeProvider) ->
   $routeProvider
-    .when('/users', templateUrl: 'js/users/users.html', controller: 'UserController')
-    .otherwise(redirectTo: '/users')
+    .when('/blobs', templateUrl: 'js/blobs/blobs.html', controller: 'BlobController')
+    .when('/blobs/:id', templateUrl: 'js/blobs/blobs.html', controller: 'BlobController')
+    .otherwise(redirectTo: '/blobs')
   return
 ]
 
