@@ -50,11 +50,11 @@ gulp.task('coffee', function () {
 gulp.task('vendor', function () {
   gulp.src(paths.vendor.js)
     .pipe(concat('vendor.js'))
-    .pipe(gulp.dest(paths.output));
+    .pipe(gulp.dest(paths.output + 'js'));
 
   gulp.src(paths.vendor.css)
     .pipe(concat('vendor.css'))
-    .pipe(gulp.dest(paths.output));
+    .pipe(gulp.dest(paths.output + 'css'));
 
   gulp.src(paths.vendor.icons)
     .pipe(gulp.dest(paths.output + paths.outputSvg))
@@ -91,5 +91,6 @@ gulp.task('watch', function() {
 });
 
 gulp.task('dev', ['clean', 'vendor', 'sass', 'coffee', 'html', 'watch']);
+gulp.task('prod', ['clean', 'vendor', 'sass', 'coffee', 'html']);
 
 gulp.task('default', ['dev']);

@@ -18,9 +18,9 @@ app.config ['$mdThemingProvider', '$mdIconProvider', ($mdThemingProvider, $mdIco
   return
 ]
 
-# app.config ['$routeProvider', ($routeProvider) ->
-  # $routeProvider
-    # .when('/blobs', templateUrl: 'partials/phone-list.html', controller: 'PhoneListCtrl')
-    # .otherwise(redirectTo: '/blobs')
-  # return
-# ]
+app.config ['$routeProvider', ($routeProvider) ->
+  $routeProvider
+    .when('/users', templateUrl: 'js/users/users.html', controller: 'UserController')
+    .otherwise(redirectTo: '/users')
+  return
+]
