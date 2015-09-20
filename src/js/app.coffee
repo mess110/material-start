@@ -1,4 +1,4 @@
-app = angular.module('app', ['ngRoute', 'LocalStorageModule', 'ngMaterial', 'users'])
+app = angular.module('app', ['ngRoute', 'ngStorage', 'ngMaterial', 'users'])
 
 app.config ['$mdThemingProvider', '$mdIconProvider', ($mdThemingProvider, $mdIconProvider) ->
   $mdIconProvider
@@ -28,6 +28,10 @@ app.config ['$routeProvider', ($routeProvider) ->
   return
 ]
 
-app.config (localStorageServiceProvider) ->
-  localStorageServiceProvider.setPrefix 'app'
+app.config(['$localStorageProvider', ($localStorageProvider) ->
+  # $localStorageProvider.get('MyKey');
+  # $localStorageProvider.set('MyKey', { k: 'value' });
+
+  $localStorageProvider.setKeyPrefix 'app'
   return
+])
